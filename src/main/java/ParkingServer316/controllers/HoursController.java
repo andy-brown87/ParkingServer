@@ -20,4 +20,5 @@ public class HoursController {
         return new ResponseEntity<>(hoursRepository.findAll(), HttpStatus.OK);
     }
 
+
 }
