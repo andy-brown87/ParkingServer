@@ -4,22 +4,21 @@ package ParkingServer316.models;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="bicycle_spots")
+@Table(name="BicycleSpots")
 
 
-public class Bicycle_spots {
+public class BicycleSpots {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     @Column(name = "id")
     private long id;
 
     @Column(name = "council_identifier")
-    private String council_identifier;
+    private String councilIdentifier;
 
     @Column(name = "capacity")
-    private int capacity;
+    private String capacity;
 
     @Column(name = "latitude")
     private long latitude;
@@ -27,15 +26,15 @@ public class Bicycle_spots {
     @Column(name = "longitude")
     private long longitude;
 
-    public Bicycle_spots(long id, String council_identifier, int capacity, long latitude, long longitude) {
+    public BicycleSpots(long id, String councilIdentifier, String capacity, long latitude, long longitude) {
         this.id = id;
-        this.council_identifier = council_identifier;
+        this.councilIdentifier = councilIdentifier;
         this.capacity = capacity;
         this.latitude = latitude;
         this.longitude = longitude;
     }
 
-    public Bicycle_spots() {
+    public BicycleSpots() {
     }
 
     public long getId() {
@@ -47,18 +46,18 @@ public class Bicycle_spots {
     }
 
     public String getCouncil_identifier() {
-        return council_identifier;
+        return councilIdentifier;
     }
 
     public void setCouncil_identifier(String council_identifier) {
-        this.council_identifier = council_identifier;
+        this.councilIdentifier = council_identifier;
     }
 
-    public int getCapacity() {
+    public String getCapacity() {
         return capacity;
     }
 
-    public void setCapacity(int capacity) {
+    public void setCapacity(String capacity) {
         this.capacity = capacity;
     }
 

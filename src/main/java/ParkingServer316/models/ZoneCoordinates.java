@@ -1,4 +1,4 @@
 package ParkingServer316.models;
 
-public class Parking_zones {
+public class ZoneCoordinates {
 }
