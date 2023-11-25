@@ -21,12 +21,12 @@ public class BicycleSpot {
     private String capacity;
 
     @Column(name = "latitude")
-    private long latitude;
+    private String latitude;
 
     @Column(name = "longitude")
-    private long longitude;
+    private String longitude;
 
-    public BicycleSpot(long id, String councilIdentifier, String capacity, long latitude, long longitude) {
+    public BicycleSpot(long id, String councilIdentifier, String capacity, String latitude, String longitude) {
         this.id = id;
         this.councilIdentifier = councilIdentifier;
         this.capacity = capacity;
@@ -61,19 +61,19 @@ public class BicycleSpot {
         this.capacity = capacity;
     }
 
-    public long getLatitude() {
+    public String getLatitude() {
         return latitude;
     }
 
-    public void setLatitude(long latitude) {
+    public void setLatitude(String latitude) {
         this.latitude = latitude;
     }
 
-    public long getLongitude() {
+    public String getLongitude() {
         return longitude;
     }
 
-    public void setLongitude(long longitude) {
+    public void setLongitude(String longitude) {
         this.longitude = longitude;
     }
 }
