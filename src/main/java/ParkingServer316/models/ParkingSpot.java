@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name="ParkingSpots")
+@Table(name="ParkingSpot")
 
 public class ParkingSpot {
 
@@ -15,11 +15,13 @@ public class ParkingSpot {
     @Column(name = "id")
     private long id;
 
-    @Column(name = "vehicle_id")
-    private long vehicleId;
+    @OneToMany(mappedBy = "vehicle_id")
+    private List<ParkingZone> parkingzone;
 
-    @OneToMany(mappedBy = "ParkingZone")
-    private List<ParkingSpot> parkingSpots;
+
+    @OneToMany(mappedBy = "parkingSpot", fetch = FetchType.LAZY)
+    private List<ParkingZone> parkingZones;
+
 
     @Column(name = "bay_type")
     private String bayType;
@@ -27,9 +29,10 @@ public class ParkingSpot {
     @Column(name = "council_bay_identifier")
     private long councilBayIdentifier;
 
-    public ParkingSpot(long id, long vehicleId, String bayType, long councilBayIdentifier) {
+    public ParkingSpot(long id, List<ParkingZone> parkingzone, List<ParkingZone> parkingZones, String bayType, long councilBayIdentifier) {
         this.id = id;
-        this.vehicleId = vehicleId;
+        this.parkingzone = parkingzone;
+        this.parkingZones = parkingZones;
         this.bayType = bayType;
         this.councilBayIdentifier = councilBayIdentifier;
     }
@@ -45,20 +48,20 @@ public class ParkingSpot {
         this.id = id;
     }
 
-    public long getVehicleId() {
-        return vehicleId;
+    public List<ParkingZone> getParkingzone() {
+        return parkingzone;
     }
 
-    public void setVehicleId(long vehicleId) {
-        this.vehicleId = vehicleId;
+    public void setParkingzone(List<ParkingZone> parkingzone) {
+        this.parkingzone = parkingzone;
     }
 
-    public List<ParkingSpot> getParkingSpots() {
-        return parkingSpots;
+    public List<ParkingZone> getParkingZones() {
+        return parkingZones;
     }
 
-    public void setParkingSpots(List<ParkingSpot> parkingSpots) {
-        this.parkingSpots = parkingSpots;
+    public void setParkingZones(List<ParkingZone> parkingZones) {
+        this.parkingZones = parkingZones;
     }
 
     public String getBayType() {

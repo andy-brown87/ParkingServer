@@ -7,7 +7,7 @@ import jakarta.persistence.*;
 @Table(name="BicycleSpots")
 
 
-public class BicycleSpots {
+public class BicycleSpot {
 
     @Id
 
@@ -26,7 +26,7 @@ public class BicycleSpots {
     @Column(name = "longitude")
     private long longitude;
 
-    public BicycleSpots(long id, String councilIdentifier, String capacity, long latitude, long longitude) {
+    public BicycleSpot(long id, String councilIdentifier, String capacity, long latitude, long longitude) {
         this.id = id;
         this.councilIdentifier = councilIdentifier;
         this.capacity = capacity;
@@ -34,7 +34,7 @@ public class BicycleSpots {
         this.longitude = longitude;
     }
 
-    public BicycleSpots() {
+    public BicycleSpot() {
     }
 
     public long getId() {

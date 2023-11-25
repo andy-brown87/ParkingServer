@@ -1,5 +1,5 @@
 package ParkingServer316.controllers;
-import ParkingServer316.models.BicycleSpots;
+import ParkingServer316.models.BicycleSpot;
 import ParkingServer316.repositories.BicycleSpotsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -16,7 +16,7 @@ public class BicycleSpotsController {
     BicycleSpotsRepository bicycleSpotsRepository;
 
     @GetMapping(value = "/bicyclespots")
-    public ResponseEntity<List<BicycleSpots>> getAllBicycleSpots(){
+    public ResponseEntity<List<BicycleSpot>> getAllBicycleSpots(){
         return new ResponseEntity<>(bicycleSpotsRepository.findAll(), HttpStatus.OK);
     }
 

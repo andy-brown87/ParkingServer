@@ -1,6 +1,7 @@
 package ParkingServer316.models;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import org.springframework.core.SpringVersion;
 
@@ -22,8 +23,12 @@ public class ParkingZone {
     @Column(name = "price")
     private int price;
 
-    @OneToMany(mappedBy = "vehicle_id")
-    private List<ParkingZone> parkingzone;
+
+
+    @ManyToOne
+    @JoinColumn(name = "parkingSpot_id", nullable = false)
+    @JsonIgnoreProperties({"parkingZones"})
+    private ParkingZone parkingZone;
 
     @Column(name = "description")
     private String description;
@@ -37,11 +42,11 @@ public class ParkingZone {
     @Column(name = "off_street_spaces")
     private int offStreetSpaces;
 
-    public ParkingZone(long id, long councilZoneIdentifier, int price, List<ParkingZone> parkingzone, String description, int publicSpaces, int permitSpaces, int offStreetSpaces) {
+    public ParkingZone(long id, long councilZoneIdentifier, int price, ParkingZone parkingZone, String description, int publicSpaces, int permitSpaces, int offStreetSpaces) {
         this.id = id;
         this.councilZoneIdentifier = councilZoneIdentifier;
         this.price = price;
-        this.parkingzone = parkingzone;
+        this.parkingZone = parkingZone;
         this.description = description;
         this.publicSpaces = publicSpaces;
         this.permitSpaces = permitSpaces;
@@ -75,12 +80,12 @@ public class ParkingZone {
         this.price = price;
     }
 
-    public List<ParkingZone> getParkingzone() {
-        return parkingzone;
+    public ParkingZone getParkingZone() {
+        return parkingZone;
     }
 
-    public void setParkingzone(List<ParkingZone> parkingzone) {
-        this.parkingzone = parkingzone;
+    public void setParkingZone(ParkingZone parkingZone) {
+        this.parkingZone = parkingZone;
     }
 
     public String getDescription() {
