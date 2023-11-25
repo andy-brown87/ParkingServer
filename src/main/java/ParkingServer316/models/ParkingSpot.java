@@ -15,12 +15,10 @@ public class ParkingSpot {
     @Column(name = "id")
     private long id;
 
-    @OneToMany(mappedBy = "vehicle_id")
-    private List<ParkingZone> parkingzone;
 
-
-    @OneToMany(mappedBy = "parkingSpot", fetch = FetchType.LAZY)
-    private List<ParkingZone> parkingZones;
+    @ManyToOne
+    @JoinColumn(name = "parking_zone_id")
+    private ParkingZone parkingZone;
 
 
     @Column(name = "bay_type")
@@ -29,10 +27,9 @@ public class ParkingSpot {
     @Column(name = "council_bay_identifier")
     private long councilBayIdentifier;
 
-    public ParkingSpot(long id, List<ParkingZone> parkingzone, List<ParkingZone> parkingZones, String bayType, long councilBayIdentifier) {
+    public ParkingSpot(long id, ParkingZone parkingZone, String bayType, long councilBayIdentifier) {
         this.id = id;
-        this.parkingzone = parkingzone;
-        this.parkingZones = parkingZones;
+        this.parkingZone = parkingZone;
         this.bayType = bayType;
         this.councilBayIdentifier = councilBayIdentifier;
     }
@@ -48,20 +45,12 @@ public class ParkingSpot {
         this.id = id;
     }
 
-    public List<ParkingZone> getParkingzone() {
-        return parkingzone;
+    public ParkingZone getParkingZone() {
+        return parkingZone;
     }
 
-    public void setParkingzone(List<ParkingZone> parkingzone) {
-        this.parkingzone = parkingzone;
-    }
-
-    public List<ParkingZone> getParkingZones() {
-        return parkingZones;
-    }
-
-    public void setParkingZones(List<ParkingZone> parkingZones) {
-        this.parkingZones = parkingZones;
+    public void setParkingZone(ParkingZone parkingZone) {
+        this.parkingZone = parkingZone;
     }
 
     public String getBayType() {
