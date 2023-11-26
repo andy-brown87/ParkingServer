@@ -11,7 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@RestController public class SpotCoordinatesController {
+@RestController
+public class SpotCoordinatesController {
 
 
     @Autowired

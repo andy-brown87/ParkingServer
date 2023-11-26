@@ -4,7 +4,7 @@ package ParkingServer316.models;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="BicycleSpots")
+@Table(name="bicycle_spots")
 
 
 public class BicycleSpot {
@@ -41,39 +41,19 @@ public class BicycleSpot {
         return id;
     }
 
-//    public void setId(long id) {
-//        this.id = id;
-//    }
-
     public String getCouncil_identifier() {
         return councilIdentifier;
     }
-
-//    public void setCouncil_identifier(String council_identifier) {
-//        this.councilIdentifier = council_identifier;
-//    }
 
     public String getCapacity() {
         return capacity;
     }
 
-//    public void setCapacity(String capacity) {
-//        this.capacity = capacity;
-//    }
-
     public String getLatitude() {
         return latitude;
     }
 
-//    public void setLatitude(String latitude) {
-//        this.latitude = latitude;
-//    }
-
     public String getLongitude() {
         return longitude;
     }
-
-//    public void setLongitude(String longitude) {
-//        this.longitude = longitude;
-//    }
 }

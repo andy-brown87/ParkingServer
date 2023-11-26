@@ -7,7 +7,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="ZoneCoordinates")
+@Table(name="zone_coordinates")
 
 public class ZoneCoordinate {
 
@@ -39,32 +39,16 @@ public class ZoneCoordinate {
         return id;
     }
 
-//    public void setId(long id) {
-//        this.id = id;
-//    }
-
     public int getZoneId() {
         return ZoneId;
     }
-
-//    public void setZoneId(int zoneId) {
-//        ZoneId = zoneId;
-//    }
 
     public String getLatitude() {
         return Latitude;
     }
 
-//    public void setLatitude(String latitude) {
-//        Latitude = latitude;
-//    }
-
     public String getLongitude() {
         return Longitude;
     }
-
-//    public void setLongitude(String longitude) {
-//        Longitude = longitude;
-//    }
 
 }
