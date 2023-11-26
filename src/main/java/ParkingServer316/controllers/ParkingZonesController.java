@@ -12,15 +12,15 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@RestController public class ParkingZonesController {
+@RestController
+public class ParkingZonesController {
 
     @Autowired
     ParkingZonesRepository parkingZonesRepository;
 
-    @GetMapping(value = "/parkingZones")
+    @GetMapping(value = "/parkingzones")
     public ResponseEntity<List<ParkingZone>> getAllParkingZones(){
         return new ResponseEntity<>(parkingZonesRepository.findAll(), HttpStatus.OK);
     }
-
 
 }
