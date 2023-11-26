@@ -82,119 +82,119 @@ public class Hours {
 
 
 
-    public void setId(long id) {
-        this.id = id;
-    }
+//    public void setId(long id) {
+//        this.id = id;
+//    }
 
     public String getMonStart() {
         return MonStart;
     }
 
-    public void setMonStart(String monStart) {
-        MonStart = monStart;
-    }
+//    public void setMonStart(String monStart) {
+//        MonStart = monStart;
+//    }
 
     public String getMonEnd() {
         return MonEnd;
     }
 
-    public void setMonEnd(String monEnd) {
-        MonEnd = monEnd;
-    }
+//    public void setMonEnd(String monEnd) {
+//        MonEnd = monEnd;
+//    }
 
     public String getTuesStart() {
         return TuesStart;
     }
 
-    public void setTuesStart(String tuesStart) {
-        TuesStart = tuesStart;
-    }
+//    public void setTuesStart(String tuesStart) {
+//        TuesStart = tuesStart;
+//    }
 
     public String getTuesEnd() {
         return TuesEnd;
     }
 
-    public void setTuesEnd(String tuesEnd) {
-        TuesEnd = tuesEnd;
-    }
+//    public void setTuesEnd(String tuesEnd) {
+//        TuesEnd = tuesEnd;
+//    }
 
     public String getWedStart() {
         return WedStart;
     }
 
-    public void setWedStart(String wedStart) {
-        WedStart = wedStart;
-    }
+//    public void setWedStart(String wedStart) {
+//        WedStart = wedStart;
+//    }
 
     public String getWedEnd() {
         return WedEnd;
     }
 
-    public void setWedEnd(String wedEnd) {
-        WedEnd = wedEnd;
-    }
+//    public void setWedEnd(String wedEnd) {
+//        WedEnd = wedEnd;
+//    }
 
     public String getThursStart() {
         return ThursStart;
     }
 
-    public void setThursStart(String thursStart) {
-        ThursStart = thursStart;
-    }
+//    public void setThursStart(String thursStart) {
+//        ThursStart = thursStart;
+//    }
 
     public String getThursEnd() {
         return ThursEnd;
     }
 
-    public void setThursEnd(String thursEnd) {
-        ThursEnd = thursEnd;
-    }
+//    public void setThursEnd(String thursEnd) {
+//        ThursEnd = thursEnd;
+//    }
 
     public String getFriStart() {
         return FriStart;
     }
 
-    public void setFriStart(String friStart) {
-        FriStart = friStart;
-    }
+//    public void setFriStart(String friStart) {
+//        FriStart = friStart;
+//    }
 
     public String getFriEnd() {
         return FriEnd;
     }
 
-    public void setFriEnd(String friEnd) {
-        FriEnd = friEnd;
-    }
+//    public void setFriEnd(String friEnd) {
+//        FriEnd = friEnd;
+//    }
 
     public String getSatStart() {
         return SatStart;
     }
 
-    public void setSatStart(String satStart) {
-        SatStart = satStart;
-    }
+//    public void setSatStart(String satStart) {
+//        SatStart = satStart;
+//    }
 
     public String getSatEnd() {
         return SatEnd;
     }
 
-    public void setSatEnd(String satEnd) {
-        SatEnd = satEnd;
-    }
+//    public void setSatEnd(String satEnd) {
+//        SatEnd = satEnd;
+//    }
 
     public String getSunStart() {
         return SunStart;
     }
 
-    public void setSunStart(String sunStart) {
-        SunStart = sunStart;
-    }
+//    public void setSunStart(String sunStart) {
+//        SunStart = sunStart;
+//    }
 
     public String getSunEnd() {
         return SunEnd;
     }
 
-    public void setSunEnd(String sunEnd) {
-        SunEnd = sunEnd;
-    }
+//    public void setSunEnd(String sunEnd) {
+//        SunEnd = sunEnd;
+//    }
 }

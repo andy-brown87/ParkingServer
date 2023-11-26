@@ -17,7 +17,7 @@ import java.util.List;
     @Autowired
     SpotCoordinatesRepository spotCoordinateRepository;
 
-    @GetMapping(value = "/spotCoordinates")
+    @GetMapping(value = "/spotcoordinates")
     public ResponseEntity<List<SpotCoordinate>> getAllSpotCoordinaates(){
         return new ResponseEntity<>(spotCoordinateRepository.findAll(), HttpStatus.OK);
     }

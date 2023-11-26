@@ -58,63 +58,63 @@ public class ParkingZone {
         return id;
     }
 
-    public void setId(long id) {
-        this.id = id;
-    }
+//    public void setId(long id) {
+//        this.id = id;
+//    }
 
     public String getCouncilZoneIdentifier() {
         return councilZoneIdentifier;
     }
 
-    public void setCouncilZoneIdentifier(String councilZoneIdentifier) {
-        this.councilZoneIdentifier = councilZoneIdentifier;
-    }
+//    public void setCouncilZoneIdentifier(String councilZoneIdentifier) {
+//        this.councilZoneIdentifier = councilZoneIdentifier;
+//    }
 
     public int getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
-        this.price = price;
-    }
+//    public void setPrice(int price) {
+//        this.price = price;
+//    }
 
     public List<ParkingSpot> getParkingSpots() {
         return parkingSpots;
     }
 
-    public void setParkingSpots(List<ParkingSpot> parkingSpots) {
-        this.parkingSpots = parkingSpots;
-    }
+//    public void setParkingSpots(List<ParkingSpot> parkingSpots) {
+//        this.parkingSpots = parkingSpots;
+//    }
 
     public String getDescription() {
         return description;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
+//    public void setDescription(String description) {
+//        this.description = description;
+//    }
 
     public int getPublicSpaces() {
         return publicSpaces;
     }
 
-    public void setPublicSpaces(int publicSpaces) {
-        this.publicSpaces = publicSpaces;
-    }
+//    public void setPublicSpaces(int publicSpaces) {
+//        this.publicSpaces = publicSpaces;
+//    }
 
     public int getPermitSpaces() {
         return permitSpaces;
     }
 
-    public void setPermitSpaces(int permitSpaces) {
-        this.permitSpaces = permitSpaces;
-    }
+//    public void setPermitSpaces(int permitSpaces) {
+//        this.permitSpaces = permitSpaces;
+//    }
 
     public int getOffStreetSpaces() {
         return offStreetSpaces;
     }
 
-    public void setOffStreetSpaces(int offStreetSpaces) {
-        this.offStreetSpaces = offStreetSpaces;
-    }
+//    public void setOffStreetSpaces(int offStreetSpaces) {
+//        this.offStreetSpaces = offStreetSpaces;
+//    }
 }

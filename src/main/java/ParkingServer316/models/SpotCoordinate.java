@@ -7,7 +7,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="SpotCoordinates")
+@Table(name="spot_coordinates")
 public class SpotCoordinate {
 
     @Id
@@ -16,7 +16,7 @@ public class SpotCoordinate {
     private long id;
 
     @Column(name = "parking_spots_id")
-    private String ParkingSpotsId;
+    private int ParkingSpotsId;
 
     @Column(name = "latitude")
     private String Latitude;
@@ -24,7 +24,7 @@ public class SpotCoordinate {
     @Column(name = "longitude")
     private String Longitude;
 
-    public SpotCoordinate(long id, String parkingSpotsId, String latitude, String longitude) {
+    public SpotCoordinate(long id, int parkingSpotsId, String latitude, String longitude) {
         this.id = id;
         ParkingSpotsId = parkingSpotsId;
         Latitude = latitude;
@@ -38,31 +38,31 @@ public class SpotCoordinate {
         return id;
     }
 
-    public void setId(long id) {
-        this.id = id;
-    }
+//    public void setId(long id) {
+//        this.id = id;
+//    }
 
-    public String getParkingSpotsId() {
+    public int getParkingSpotsId() {
         return ParkingSpotsId;
     }
 
-    public void setParkingSpotsId(String parkingSpotsId) {
-        ParkingSpotsId = parkingSpotsId;
-    }
+//    public void setParkingSpotsId(int parkingSpotsId) {
+//        ParkingSpotsId = parkingSpotsId;
+//    }
 
     public String getLatitude() {
         return Latitude;
     }
 
-    public void setLatitude(String latitude) {
-        Latitude = latitude;
-    }
+//    public void setLatitude(String latitude) {
+//        Latitude = latitude;
+//    }
 
     public String getLongitude() {
         return Longitude;
     }
 
-    public void setLongitude(String longitude) {
-        Longitude = longitude;
-    }
+//    public void setLongitude(String longitude) {
+//        Longitude = longitude;
+//    }
 }

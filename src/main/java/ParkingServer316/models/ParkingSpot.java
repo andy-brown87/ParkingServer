@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name="ParkingSpot")
+@Table(name="parking_spots")
 
 public class ParkingSpot {
 
@@ -41,31 +41,31 @@ public class ParkingSpot {
         return id;
     }
 
-    public void setId(long id) {
-        this.id = id;
-    }
+//    public void setId(long id) {
+//        this.id = id;
+//    }
 
     public ParkingZone getParkingZone() {
         return parkingZone;
     }
 
-    public void setParkingZone(ParkingZone parkingZone) {
-        this.parkingZone = parkingZone;
-    }
+//    public void setParkingZone(ParkingZone parkingZone) {
+//        this.parkingZone = parkingZone;
+//    }
 
     public String getBayType() {
         return bayType;
     }
 
-    public void setBayType(String bayType) {
-        this.bayType = bayType;
-    }
+//    public void setBayType(String bayType) {
+//        this.bayType = bayType;
+//    }
 
     public long getCouncilBayIdentifier() {
         return councilBayIdentifier;
     }
 
-    public void setCouncilBayIdentifier(long councilbayIdentifier) {
-        this.councilBayIdentifier = councilbayIdentifier;
-    }
+//    public void setCouncilBayIdentifier(long councilbayIdentifier) {
+//        this.councilBayIdentifier = councilbayIdentifier;
+//    }
 }
