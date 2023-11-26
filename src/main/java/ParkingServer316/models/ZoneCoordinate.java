@@ -20,24 +20,16 @@ public class ZoneCoordinate {
     private int ZoneId;
 
     @Column(name = "latitude")
-    private long Latitude;
+    private String Latitude;
 
     @Column(name = "longitude")
-    private long Longitude;
+    private String Longitude;
 
-    @Column(name = "latitudedelta")
-    private long LatitudeDelta;
-
-    @Column(name = "longitudedelta")
-    private long LongitudeDelta;
-
-    public ZoneCoordinate(long id, int zoneId, long latitude, long longitude, long latitudeDelta, long longitudeDelta) {
+    public ZoneCoordinate(long id, int zoneId, String latitude, String longitude) {
         this.id = id;
         ZoneId = zoneId;
         Latitude = latitude;
         Longitude = longitude;
-        LatitudeDelta = latitudeDelta;
-        LongitudeDelta = longitudeDelta;
     }
 
     public ZoneCoordinate() {
@@ -59,35 +51,20 @@ public class ZoneCoordinate {
         ZoneId = zoneId;
     }
 
-    public long getLatitude() {
+    public String getLatitude() {
         return Latitude;
     }
 
-    public void setLatitude(long latitude) {
+    public void setLatitude(String latitude) {
         Latitude = latitude;
     }
 
-    public long getLongitude() {
+    public String getLongitude() {
         return Longitude;
     }
 
-    public void setLongitude(long longitude) {
+    public void setLongitude(String longitude) {
         Longitude = longitude;
     }
 
-    public long getLatitudeDelta() {
-        return LatitudeDelta;
-    }
-
-    public void setLatitudeDelta(long latitudeDelta) {
-        LatitudeDelta = latitudeDelta;
-    }
-
-    public long getLongitudeDelta() {
-        return LongitudeDelta;
-    }
-
-    public void setLongitudeDelta(long longitudeDelta) {
-        LongitudeDelta = longitudeDelta;
-    }
 }
