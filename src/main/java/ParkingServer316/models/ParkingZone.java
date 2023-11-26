@@ -5,10 +5,11 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import org.springframework.core.SpringVersion;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name="ParkingZone")
+@Table(name="parking_zones")
 
 public class ParkingZone {
 
@@ -18,17 +19,14 @@ public class ParkingZone {
     private long id;
 
     @Column(name = "council_zone_identifier")
-    private long councilZoneIdentifier;
+    private String councilZoneIdentifier;
 
     @Column(name = "price")
     private int price;
 
-
-
-    @ManyToOne
-    @JoinColumn(name = "parkingSpot_id", nullable = false)
+    @OneToMany
     @JsonIgnoreProperties({"parkingZones"})
-    private ParkingZone parkingZone;
+    private List<ParkingSpot> parkingSpots;
 
     @Column(name = "description")
     private String description;
@@ -42,11 +40,11 @@ public class ParkingZone {
     @Column(name = "off_street_spaces")
     private int offStreetSpaces;
 
-    public ParkingZone(long id, long councilZoneIdentifier, int price, ParkingZone parkingZone, String description, int publicSpaces, int permitSpaces, int offStreetSpaces) {
+    public ParkingZone(long id, String councilZoneIdentifier, int price, String description, int publicSpaces, int permitSpaces, int offStreetSpaces) {
         this.id = id;
         this.councilZoneIdentifier = councilZoneIdentifier;
         this.price = price;
-        this.parkingZone = parkingZone;
+        this.parkingSpots = new ArrayList<>(); // Corrected field name
         this.description = description;
         this.publicSpaces = publicSpaces;
         this.permitSpaces = permitSpaces;
@@ -64,11 +62,11 @@ public class ParkingZone {
         this.id = id;
     }
 
-    public long getCouncilZoneIdentifier() {
+    public String getCouncilZoneIdentifier() {
         return councilZoneIdentifier;
     }
 
-    public void setCouncilZoneIdentifier(long councilZoneIdentifier) {
+    public void setCouncilZoneIdentifier(String councilZoneIdentifier) {
         this.councilZoneIdentifier = councilZoneIdentifier;
     }
 
@@ -80,12 +78,12 @@ public class ParkingZone {
         this.price = price;
     }
 
-    public ParkingZone getParkingZone() {
-        return parkingZone;
+    public List<ParkingSpot> getParkingSpots() {
+        return parkingSpots;
     }
 
-    public void setParkingZone(ParkingZone parkingZone) {
-        this.parkingZone = parkingZone;
+    public void setParkingSpots(List<ParkingSpot> parkingSpots) {
+        this.parkingSpots = parkingSpots;
     }
 
     public String getDescription() {
