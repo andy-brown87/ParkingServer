@@ -66,7 +66,7 @@ public class ParkingZone {
         return price;
     }
 
-    public Hours getParkingSpots() {
+    public Hours getParkingHours() {
         return hours;
     }
 
