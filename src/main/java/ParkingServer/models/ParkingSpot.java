@@ -13,7 +13,6 @@ public class ParkingSpot {
     @Column(name = "id")
     private long id;
 
-
     @ManyToOne
     @JoinColumn(name = "parking_zone_id")
     private ParkingZone parkingZone;
@@ -25,11 +24,19 @@ public class ParkingSpot {
     @Column(name = "council_bay_identifier")
     private long councilBayIdentifier;
 
-    public ParkingSpot(long id, ParkingZone parkingZone, String bayType, long councilBayIdentifier) {
+    @Column(name = "default_latitude")
+    private String defaultLatitude;
+
+    @Column(name = "default_longitude")
+    private String defaultLongitude;
+
+    public ParkingSpot(long id, ParkingZone parkingZone, String bayType, long councilBayIdentifier, String defaultLatitude, String defaultLongitude) {
         this.id = id;
         this.parkingZone = parkingZone;
         this.bayType = bayType;
         this.councilBayIdentifier = councilBayIdentifier;
+        this.defaultLatitude = defaultLatitude;
+        this.defaultLongitude = defaultLongitude;
     }
 
     public ParkingSpot() {
@@ -49,5 +56,13 @@ public class ParkingSpot {
 
     public long getCouncilBayIdentifier() {
         return councilBayIdentifier;
+    }
+
+    public String getDefaultLatitude() {
+        return defaultLatitude;
+    }
+
+    public String getDefaultLongitude() {
+        return defaultLongitude;
     }
 }
