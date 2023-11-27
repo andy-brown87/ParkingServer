@@ -1,18 +1,15 @@
-package ParkingServer316.controllers;
+package ParkingServer.controllers;
 
 
-import ParkingServer316.models.ParkingSpot;
-import ParkingServer316.models.ParkingZone;
-import ParkingServer316.repositories.ParkingZonesRepository;
+import ParkingServer.models.ParkingZone;
+import ParkingServer.repositories.ParkingZonesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 public class ParkingZonesController {

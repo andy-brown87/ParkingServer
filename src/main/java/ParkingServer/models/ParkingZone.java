@@ -1,9 +1,8 @@
-package ParkingServer316.models;
+package ParkingServer.models;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
-import org.springframework.core.SpringVersion;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,9 +23,10 @@ public class ParkingZone {
     @Column(name = "price")
     private int price;
 
-    @OneToMany
-    @JsonIgnoreProperties({"parkingZones"})
-    private List<ParkingSpot> parkingSpots;
+    @ManyToOne
+    @JoinColumn(name = "hours_id", nullable=false)
+    @JsonIgnoreProperties({"hours"})
+    private Hours hours;
 
     @Column(name = "description")
     private String description;
@@ -40,11 +40,11 @@ public class ParkingZone {
     @Column(name = "off_street_spaces")
     private int offStreetSpaces;
 
-    public ParkingZone(long id, String councilZoneIdentifier, int price, String description, int publicSpaces, int permitSpaces, int offStreetSpaces) {
+    public ParkingZone(long id, String councilZoneIdentifier, int price, Hours hours, String description, int publicSpaces, int permitSpaces, int offStreetSpaces) {
         this.id = id;
         this.councilZoneIdentifier = councilZoneIdentifier;
         this.price = price;
-        this.parkingSpots = new ArrayList<>(); // Corrected field name
+        this.hours = hours;
         this.description = description;
         this.publicSpaces = publicSpaces;
         this.permitSpaces = permitSpaces;
@@ -66,8 +66,8 @@ public class ParkingZone {
         return price;
     }
 
-    public List<ParkingSpot> getParkingSpots() {
-        return parkingSpots;
+    public Hours getParkingSpots() {
+        return hours;
     }
 
     public String getDescription() {

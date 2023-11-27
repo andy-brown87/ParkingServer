@@ -1,9 +1,7 @@
-package ParkingServer316.models;
+package ParkingServer.models;
 
 
 import jakarta.persistence.*;
-
-import java.util.List;
 
 @Entity
 @Table(name="parking_spots")

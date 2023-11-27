@@ -1,6 +1,6 @@
-package ParkingServer316.controllers;
-import ParkingServer316.models.Hours;
-import ParkingServer316.repositories.HoursRepository;
+package ParkingServer.controllers;
+import ParkingServer.models.Hours;
+import ParkingServer.repositories.HoursRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

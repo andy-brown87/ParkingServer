@@ -1,6 +1,6 @@
-package ParkingServer316.repositories;
+package ParkingServer.repositories;
 
-import ParkingServer316.models.ParkingSpot;
+import ParkingServer.models.ParkingSpot;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

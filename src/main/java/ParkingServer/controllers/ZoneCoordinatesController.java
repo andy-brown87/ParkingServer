@@ -1,6 +1,6 @@
-package ParkingServer316.controllers;
-import ParkingServer316.models.ZoneCoordinate;
-import ParkingServer316.repositories.ZoneCoordinateRepository;
+package ParkingServer.controllers;
+import ParkingServer.models.ZoneCoordinate;
+import ParkingServer.repositories.ZoneCoordinateRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

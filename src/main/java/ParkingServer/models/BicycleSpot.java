@@ -1,4 +1,4 @@
-package ParkingServer316.models;
+package ParkingServer.models;
 
 
 import jakarta.persistence.*;

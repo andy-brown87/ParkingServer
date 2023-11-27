@@ -1,4 +1,4 @@
-package ParkingServer316;
+package ParkingServer;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -9,5 +9,7 @@ class ApplicationTests {
 	@Test
 	void contextLoads() {
 	}
+
+
 
 }

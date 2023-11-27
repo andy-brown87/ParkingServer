@@ -1,7 +1,7 @@
-package ParkingServer316.controllers;
+package ParkingServer.controllers;
 
-import ParkingServer316.models.ParkingSpot;
-import ParkingServer316.repositories.ParkingSpotsRepository;
+import ParkingServer.models.ParkingSpot;
+import ParkingServer.repositories.ParkingSpotsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

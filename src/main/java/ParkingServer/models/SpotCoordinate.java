@@ -1,4 +1,4 @@
-package ParkingServer316.models;
+package ParkingServer.models;
 
 
 import jakarta.persistence.Column;
@@ -7,17 +7,16 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="zone_coordinates")
-
-public class ZoneCoordinate {
+@Table(name="spot_coordinates")
+public class SpotCoordinate {
 
     @Id
 
     @Column(name = "id")
     private long id;
 
-    @Column(name = "zoneId")
-    private int ZoneId;
+    @Column(name = "parking_spots_id")
+    private int ParkingSpotsId;
 
     @Column(name = "latitude")
     private String Latitude;
@@ -25,22 +24,22 @@ public class ZoneCoordinate {
     @Column(name = "longitude")
     private String Longitude;
 
-    public ZoneCoordinate(long id, int zoneId, String latitude, String longitude) {
+    public SpotCoordinate(long id, int parkingSpotsId, String latitude, String longitude) {
         this.id = id;
-        ZoneId = zoneId;
+        ParkingSpotsId = parkingSpotsId;
         Latitude = latitude;
         Longitude = longitude;
     }
 
-    public ZoneCoordinate() {
+    public SpotCoordinate() {
     }
 
     public long getId() {
         return id;
     }
 
-    public int getZoneId() {
-        return ZoneId;
+    public int getParkingSpotsId() {
+        return ParkingSpotsId;
     }
 
     public String getLatitude() {
@@ -50,5 +49,4 @@ public class ZoneCoordinate {
     public String getLongitude() {
         return Longitude;
     }
-
 }
