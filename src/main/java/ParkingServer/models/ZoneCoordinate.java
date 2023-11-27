@@ -16,20 +16,20 @@ public class ZoneCoordinate {
     @Column(name = "id")
     private long id;
 
-    @Column(name = "zoneId")
-    private int ZoneId;
+    @Column(name = "zone_id")
+    private int zoneId;
 
     @Column(name = "latitude")
-    private String Latitude;
+    private String latitude;
 
     @Column(name = "longitude")
-    private String Longitude;
+    private String longitude;
 
     public ZoneCoordinate(long id, int zoneId, String latitude, String longitude) {
         this.id = id;
-        ZoneId = zoneId;
-        Latitude = latitude;
-        Longitude = longitude;
+        this.zoneId = zoneId;
+        this.latitude = latitude;
+        this.longitude = longitude;
     }
 
     public ZoneCoordinate() {
@@ -40,15 +40,14 @@ public class ZoneCoordinate {
     }
 
     public int getZoneId() {
-        return ZoneId;
+        return zoneId;
     }
 
     public String getLatitude() {
-        return Latitude;
+        return latitude;
     }
 
     public String getLongitude() {
-        return Longitude;
+        return longitude;
     }
-
 }
