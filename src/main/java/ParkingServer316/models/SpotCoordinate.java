@@ -38,31 +38,15 @@ public class SpotCoordinate {
         return id;
     }
 
-//    public void setId(long id) {
-//        this.id = id;
-//    }
-
     public int getParkingSpotsId() {
         return ParkingSpotsId;
     }
-
-//    public void setParkingSpotsId(int parkingSpotsId) {
-//        ParkingSpotsId = parkingSpotsId;
-//    }
 
     public String getLatitude() {
         return Latitude;
     }
 
-//    public void setLatitude(String latitude) {
-//        Latitude = latitude;
-//    }
-
     public String getLongitude() {
         return Longitude;
     }
-
-//    public void setLongitude(String longitude) {
-//        Longitude = longitude;
-//    }
 }
