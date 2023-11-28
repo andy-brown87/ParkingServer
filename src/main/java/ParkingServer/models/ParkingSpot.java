@@ -30,6 +30,9 @@ public class ParkingSpot {
     @Column(name = "default_longitude")
     private String defaultLongitude;
 
+    @Column(name = "price")
+    private long price;
+
     public ParkingSpot(long id, ParkingZone parkingZone, String bayType, long councilBayIdentifier, String defaultLatitude, String defaultLongitude) {
         this.id = id;
         this.parkingZone = parkingZone;
@@ -37,6 +40,7 @@ public class ParkingSpot {
         this.councilBayIdentifier = councilBayIdentifier;
         this.defaultLatitude = defaultLatitude;
         this.defaultLongitude = defaultLongitude;
+        this.price = price;
     }
 
     public ParkingSpot() {
@@ -64,5 +68,9 @@ public class ParkingSpot {
 
     public String getDefaultLongitude() {
         return defaultLongitude;
+    }
+
+    public long getPrice() {
+        return price;
     }
 }
